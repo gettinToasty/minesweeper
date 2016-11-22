@@ -56,6 +56,6 @@ class MinesweeperGame
 end
 
 if __FILE__ == $PROGRAM_NAME
-  game = MinesweeperGame.new(2)
+  game = MinesweeperGame.new()
   game.run
 end

@@ -15,10 +15,20 @@ class Tile
   end
 
   def to_s
-    return "F" if @flagged
-    return "#" unless @revealed
-    return "@" if @is_bomb
-    @fringe_val == 0 ? "_" : @fringe_val.to_s
+    return "🚩" if @flagged
+    return "⬛️" unless @revealed
+    return "☠️" if @is_bomb
+    case @fringe_val
+    when 0 then "⬜️"
+    when 1 then "1️⃣"
+    when 2 then "2️⃣"
+    when 3 then "3️⃣"
+    when 4 then "4️⃣"
+    when 5 then "5️⃣"
+    when 6 then "6️⃣"
+    when 7 then "7️⃣"
+    when 8 then "8️⃣"
+    end
   end
 
   def flag
